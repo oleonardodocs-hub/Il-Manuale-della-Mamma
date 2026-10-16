@@ -25,70 +25,42 @@ let state = {
   favorites: getJSON(STORE.favorites, []),
   diary: getJSON(STORE.diary, []),
   shopChecked: getJSON(STORE.shopChecked, {}),
-  currentView: "home",
-  obStepIndex: 0,
-  obSelectedAge: null,
-  obSelectedAllergens: []
+  currentView: "home"
 };
-
-const obStepsOrder = ["ob-step-welcome", "ob-step-1", "ob-step-2"];
 
 /* ================= ONBOARDING ================= */
 function initOnboarding(){
   document.getElementById("ob-subtitle").textContent = APP_DATA.onboarding.welcomeSubtitle;
   document.getElementById("ob-disclaimer").textContent = APP_DATA.onboarding.disclaimer;
 
+  const ageIcons = { "6-8":"🥣", "9-11":"🥄", "12-17":"🍽️", "18-24":"👨‍👩‍👧" };
   const ageGroup = document.getElementById("ob-age-group");
-  ageGroup.innerHTML = APP_DATA.ageRanges.map(a =>
-    `<button type="button" class="chip" data-age="${a.id}">${a.label}</button>`).join("");
-  ageGroup.querySelectorAll(".chip").forEach(btn=>{
-    btn.addEventListener("click", ()=>{
-      ageGroup.querySelectorAll(".chip").forEach(b=>b.classList.remove("selected"));
-      btn.classList.add("selected");
-      state.obSelectedAge = btn.dataset.age;
-    });
+  ageGroup.innerHTML = APP_DATA.ageRanges.map(a => `
+    <button type="button" class="age-tile" data-age="${a.id}">
+      <span class="age-tile-icon">${ageIcons[a.id] || "🍼"}</span>
+      <span class="age-tile-text">
+        <span class="age-tile-label">${a.label}</span>
+        <span class="age-tile-desc">${a.desc}</span>
+      </span>
+      <span class="age-tile-arrow">›</span>
+    </button>
+  `).join("");
+  ageGroup.querySelectorAll(".age-tile").forEach(btn=>{
+    btn.addEventListener("click", ()=>obFinish(btn.dataset.age));
   });
-
-  const allGroup = document.getElementById("ob-allergen-group");
-  allGroup.innerHTML = APP_DATA.allergenList.map(a =>
-    `<button type="button" class="chip" data-allergen="${a}">${a}</button>`).join("") +
-    `<button type="button" class="chip" data-allergen="nessuna">nessuna nota</button>`;
-  allGroup.querySelectorAll(".chip").forEach(btn=>{
-    btn.addEventListener("click", ()=>{
-      btn.classList.toggle("selected");
-      const val = btn.dataset.allergen;
-      if(state.obSelectedAllergens.includes(val)){
-        state.obSelectedAllergens = state.obSelectedAllergens.filter(x=>x!==val);
-      } else {
-        state.obSelectedAllergens.push(val);
-      }
-    });
-  });
-
-  document.querySelectorAll('[data-action="ob-next"]').forEach(btn=>{
-    btn.addEventListener("click", obNext);
-  });
-  document.querySelector('[data-action="ob-finish"]').addEventListener("click", obFinish);
 }
 
-function obNext(){
-  document.getElementById(obStepsOrder[state.obStepIndex]).classList.add("hidden");
-  state.obStepIndex++;
-  document.getElementById(obStepsOrder[state.obStepIndex]).classList.remove("hidden");
-}
-
-function obFinish(){
-  if(state.obSelectedAge) state.ageRange = state.obSelectedAge;
-  state.allergens = state.obSelectedAllergens.filter(a=>a!=="nessuna");
+function obFinish(ageId){
+  state.ageRange = ageId;
   setJSON(STORE.ageRange, state.ageRange);
-  setJSON(STORE.allergens, state.allergens);
   setJSON(STORE.onboardingDone, true);
   document.getElementById("onboarding").classList.add("hidden");
-  startApp();
+  recipeFilter.ageRange = ageId;
+  startApp("recipes");
 }
 
 /* ================= NAVIGAZIONE ================= */
-function startApp(){
+function startApp(initialView){
   document.getElementById("app").classList.remove("hidden");
 
   document.querySelectorAll(".drawer-link").forEach(btn=>{
@@ -103,7 +75,7 @@ function startApp(){
   document.getElementById("drawer-overlay").addEventListener("click", closeDrawer);
 
   updateDrawerAge();
-  switchView("home");
+  switchView(initialView || "home");
 }
 
 function openDrawer(){

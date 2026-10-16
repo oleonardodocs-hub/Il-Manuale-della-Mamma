@@ -1,7 +1,7 @@
 /* Service worker — Il Manuale della Mamma
    Cache base per funzionamento offline (app shell + dati). */
 
-const CACHE_NAME = "manuale-mamma-v3";
+const CACHE_NAME = "manuale-mamma-v4";
 const ASSETS_TO_CACHE = [
   "./",
   "./index.html",
