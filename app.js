@@ -152,6 +152,14 @@ function recipeOfTheDay(){
   return pool[dayIndex];
 }
 
+const COVER_COUNT = 6;
+function coverForRecipe(id, variant){
+  let hash = 0;
+  for(let i=0;i<id.length;i++){ hash = (hash * 31 + id.charCodeAt(i)) >>> 0; }
+  const n = (hash % COVER_COUNT) + 1;
+  return variant === "wide" ? `assets/cover-${n}-wide.png` : `assets/cover-${n}.png`;
+}
+
 /* ================= HOME ================= */
 function renderHome(){
   const rod = recipeOfTheDay();
@@ -169,12 +177,14 @@ function renderHome(){
     </div>
 
     <div class="section-title">Ricetta del giorno</div>
-    <div class="card recipe-card" data-open-recipe="${rod.id}">
-      <div>
-        <div class="rc-title">${rod.title}</div>
-        <div class="rc-meta">${rod.prepTime} · ${rod.texture}</div>
+    <div class="feature-card" data-open-recipe="${rod.id}">
+      <img class="feature-media" src="${coverForRecipe(rod.id, 'wide')}" alt="${rod.title}">
+      <span class="feature-badge">${rod.prepTime}</span>
+      <button class="feature-fav" data-toggle-fav="${rod.id}">${state.favorites.includes(rod.id)?'❤️':'🤍'}</button>
+      <div class="feature-overlay">
+        <div class="f-title">${rod.title}</div>
+        <span class="feature-cta">Vedi ricetta</span>
       </div>
-      <span>›</span>
     </div>
 
     <div class="section-title">Menù di oggi (${todayName})</div>
@@ -288,9 +298,13 @@ function recipeCardHTML(r){
   const isFav = state.favorites.includes(r.id);
   return `
     <div class="card recipe-card" data-open-recipe="${r.id}">
-      <div>
+      <div class="rc-thumb-wrap">
+        <img class="rc-thumb" src="${coverForRecipe(r.id)}" alt="${r.title}">
+        <span class="rc-badge">${r.prepTime}</span>
+      </div>
+      <div class="rc-body">
         <div class="rc-title">${r.title}</div>
-        <div class="rc-meta">${ageLabel(r.ageRange)} · ${r.prepTime} · ${r.texture}</div>
+        <div class="rc-meta">${ageLabel(r.ageRange)} · ${r.texture}</div>
         <div>${r.allergens.map(a=>`<span class="tag">${a}</span>`).join("")}</div>
       </div>
       <button class="fav-btn ${isFav?'active':''}" data-toggle-fav="${r.id}">${isFav?'❤️':'🤍'}</button>
@@ -309,10 +323,13 @@ function openRecipe(id){
       <button class="back-btn" data-action="back-recipes">←</button>
       <h2 style="margin:0">${r.title}</h2>
     </div>
+    <div class="recipe-banner">
+      <img src="${coverForRecipe(r.id, 'wide')}" alt="${r.title}">
+      ${r.prepTime ? `<span class="rb-badge">${r.prepTime}</span>` : ""}
+    </div>
     <div class="card">
       <p>
         ${r.ageRange ? `<span class="tag age">${ageLabel(r.ageRange)}</span>` : ""}
-        ${r.prepTime ? `<span class="tag">${r.prepTime}</span>` : ""}
         ${(r.allergens||[]).map(a=>`<span class="tag">${a}</span>`).join("")}
       </p>
       <p><strong>Consistenza:</strong> ${r.texture || "—"}</p>
@@ -437,11 +454,13 @@ function renderLibrary(){
       <p class="help-text">Prima selezione disponibile, in continuo aggiornamento.</p>
       ${APP_DATA.familyRecipes.map(r=>`
         <div class="recipe-card" data-open-recipe="${r.id}" style="padding:10px 0;border-bottom:1px dashed var(--bordo)">
-          <div>
+          <div class="rc-thumb-wrap">
+            <img class="rc-thumb" src="${coverForRecipe(r.id)}" alt="${r.title}">
+          </div>
+          <div class="rc-body">
             <div class="rc-title">${r.title}</div>
             <div class="rc-meta">${(r.allergens||[]).join(", ") || "nessun allergene indicato"}</div>
           </div>
-          <span>›</span>
         </div>
       `).join("")}
     </div>
@@ -540,6 +559,7 @@ function attachViewListeners(view){
     el.addEventListener("click", (e)=>{
       e.stopPropagation();
       toggleFavorite(el.dataset.toggleFav);
+      switchView(state.currentView);
     });
   });
   document.querySelectorAll('[data-view]').forEach(el=>{

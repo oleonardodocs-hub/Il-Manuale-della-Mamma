@@ -136,12 +136,13 @@ ul{ margin:0; }
 }
 .app-logo{ font-weight: 700; font-size: 15.5px; font-family: "Fraunces", serif; }
 .icon-btn{
-  background: rgba(255,255,255,0.16);
-  border: none; border-radius: 12px;
-  width: 38px; height:38px;
+  background: rgba(255,255,255,0.18);
+  border: none; border-radius: 50%;
+  width: 40px; height:40px;
   display:flex; align-items:center; justify-content:center;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.12);
 }
-.icon-btn.ghost{ background: transparent; color: var(--testo); }
+.icon-btn.ghost{ background: var(--verde-tenue); color: var(--testo); box-shadow:none; }
 
 /* hamburger / x / user drawn with pseudo-elements to avoid extra markup */
 [data-action="open-drawer"]::before{
@@ -209,12 +210,50 @@ ul{ margin:0; }
 
 /* ---------- Cards & componenti comuni ---------- */
 .hero-card{
-  background: linear-gradient(135deg, var(--verde) 0%, #2f5438 100%);
-  color: #fff; border-radius: var(--radius);
-  padding: 22px 20px; margin-bottom: 18px; box-shadow: var(--ombra-lg);
+  background: linear-gradient(135deg, var(--oro) 0%, var(--verde) 46%, var(--verde-scuro) 100%);
+  color: #fff; border-radius: 24px;
+  padding: 24px 22px; margin-bottom: 20px; box-shadow: var(--ombra-lg);
+  position: relative; overflow: hidden;
+}
+.hero-card::after{
+  content:""; position:absolute; width:180px; height:180px; border-radius:50%;
+  background: rgba(255,255,255,0.10); top:-70px; right:-50px;
 }
 .hero-card h2{ color:#fff; }
-.hero-card .tag.age{ background: rgba(255,255,255,0.18); color:#fff; }
+.hero-card p{ color: rgba(255,255,255,0.88); }
+.hero-card .tag.age{ background: rgba(255,255,255,0.22); color:#fff; }
+
+/* ---------- Card in evidenza (ricetta del giorno) ---------- */
+.feature-card{
+  position: relative; border-radius: 22px; overflow: hidden;
+  margin-bottom: 18px; box-shadow: var(--ombra-lg); cursor:pointer;
+  background: var(--verde-scuro);
+}
+.feature-media{ width:100%; height: 190px; object-fit: cover; display:block; }
+.feature-overlay{
+  position: absolute; inset:0;
+  background: linear-gradient(0deg, rgba(20,32,22,0.88) 0%, rgba(20,32,22,0.15) 55%, rgba(20,32,22,0) 100%);
+  display:flex; flex-direction: column; justify-content: flex-end; padding: 16px;
+}
+.feature-overlay .f-title{ color:#fff; font-family:"Fraunces", serif; font-size: 19px; font-weight:700; margin-bottom: 6px; }
+.feature-badge{
+  position:absolute; top:14px; left:14px;
+  background: rgba(255,255,255,0.92); color: var(--verde-scuro);
+  padding: 6px 13px; border-radius: 999px; font-size: 11.5px; font-weight: 700;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.18);
+}
+.feature-fav{
+  position:absolute; top:14px; right:14px;
+  background: rgba(255,255,255,0.92); border:none; width:36px; height:36px; border-radius:50%;
+  display:flex; align-items:center; justify-content:center; font-size:17px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.18);
+}
+.feature-cta{
+  display:inline-block; align-self: flex-start;
+  background: var(--pesca); color:#fff; font-weight:700; font-size: 12.5px;
+  padding: 9px 16px; border-radius: 999px; margin-top: 4px;
+  box-shadow: 0 4px 12px rgba(224,138,91,0.4);
+}
 
 .card{
   background: #fff; border-radius: var(--radius);
@@ -256,23 +295,40 @@ ul{ margin:0; }
 .filter-chip.active{ background: var(--verde); color:#fff; border-color: var(--verde); }
 
 .recipe-card{
-  display:flex; justify-content: space-between; align-items:center;
-  gap: 10px; cursor:pointer;
+  display:flex; align-items:center;
+  gap: 12px; cursor:pointer; padding: 10px;
 }
-.recipe-card .rc-title{ font-weight: 700; color: var(--verde-scuro); margin-bottom: 4px; font-size: 15px; }
-.recipe-card .rc-meta{ font-size: 12px; color: var(--testo-tenue); }
-.fav-btn{ background:none; border:none; font-size: 21px; flex: 0 0 auto; }
+.recipe-card .rc-thumb-wrap{ position: relative; flex: 0 0 auto; }
+.recipe-card .rc-thumb{ width:64px; height:64px; border-radius: 14px; object-fit: cover; display:block; box-shadow: 0 3px 8px rgba(36,64,44,0.18); }
+.recipe-card .rc-badge{
+  position:absolute; bottom:-5px; left:50%; transform: translateX(-50%);
+  background: #fff; color: var(--verde-scuro); font-size: 9px; font-weight:700;
+  padding: 2px 7px; border-radius: 999px; box-shadow: 0 2px 5px rgba(0,0,0,0.15); white-space:nowrap;
+}
+.recipe-card .rc-body{ flex:1; min-width:0; }
+.recipe-card .rc-title{ font-weight: 700; color: var(--verde-scuro); margin-bottom: 3px; font-size: 14.5px; }
+.recipe-card .rc-meta{ font-size: 11.5px; color: var(--testo-tenue); }
+.fav-btn{ background:none; border:none; font-size: 20px; flex: 0 0 auto; }
 
 .pill-btn{
   display:inline-block; background: var(--verde-chiaro); color: var(--verde-scuro);
-  border: none; border-radius: 999px; padding: 10px 17px; font-size: 13px; font-weight:700;
-  margin: 4px 6px 0 0;
+  border: none; border-radius: 999px; padding: 11px 18px; font-size: 13px; font-weight:700;
+  margin: 4px 6px 0 0; box-shadow: 0 2px 8px rgba(36,64,44,0.08);
 }
-.pill-btn.outline{ background:#fff; border: 1.5px solid var(--verde); color: var(--verde); }
-.pill-btn.accent{ background: var(--pesca); color: #fff; }
+.pill-btn.outline{ background:#fff; border: 1.5px solid var(--verde); color: var(--verde); box-shadow:none; }
+.pill-btn.accent{ background: linear-gradient(135deg, var(--pesca) 0%, #c96f3f 100%); color: #fff; box-shadow: 0 6px 16px rgba(224,138,91,0.38); }
 
 .detail-header{ display:flex; align-items:center; gap: 10px; margin-bottom: 14px; }
-.back-btn{ background: var(--verde-chiaro); border:none; width:36px; height:36px; border-radius: 10px; color: var(--verde-scuro); font-size: 18px; display:flex; align-items:center; justify-content:center; }
+.back-btn{ background: var(--verde-chiaro); border:none; width:36px; height:36px; border-radius: 50%; color: var(--verde-scuro); font-size: 18px; display:flex; align-items:center; justify-content:center; }
+
+.recipe-banner{
+  position: relative; border-radius: 22px; overflow: hidden; margin-bottom: 14px; box-shadow: var(--ombra-lg);
+}
+.recipe-banner img{ width:100%; height:170px; object-fit:cover; display:block; }
+.recipe-banner .rb-badge{
+  position:absolute; bottom:12px; left:12px; background: rgba(255,255,255,0.94); color: var(--verde-scuro);
+  padding: 6px 13px; border-radius: 999px; font-size: 11.5px; font-weight:700; box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+}
 
 .ingredient-list, .step-list{ padding-left: 20px; }
 .step-list li{ margin-bottom: 9px; }
