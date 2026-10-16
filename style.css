@@ -1,0 +1,227 @@
+/* ============================================================
+   IL MANUALE DELLA MAMMA — stile dell'app
+   ============================================================ */
+
+:root{
+  --verde: #4f7a5c;
+  --verde-scuro: #35503e;
+  --verde-chiaro: #e7f0e5;
+  --pesca: #e8936b;
+  --pesca-chiaro: #fbe6da;
+  --crema: #fdf8f2;
+  --bianco: #ffffff;
+  --testo: #2f3b33;
+  --testo-tenue: #6b776e;
+  --bordo: #e7e0d6;
+  --ombra: 0 2px 10px rgba(47,59,51,0.08);
+  --radius: 16px;
+}
+
+*{ box-sizing: border-box; }
+
+html,body{
+  margin:0; padding:0;
+  font-family: "Segoe UI", Roboto, -apple-system, BlinkMacSystemFont, sans-serif;
+  background: var(--crema);
+  color: var(--testo);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,h2,h3{ margin: 0 0 8px; color: var(--verde-scuro); }
+p{ margin: 0 0 10px; line-height: 1.5; }
+.hidden{ display:none !important; }
+
+button{ font-family: inherit; cursor: pointer; }
+
+/* ---------- Onboarding ---------- */
+.screen{
+  min-height: 100vh;
+  display:flex; align-items:center; justify-content:center;
+  background: linear-gradient(180deg, var(--verde-chiaro) 0%, var(--crema) 55%);
+  padding: 24px 16px;
+}
+.onboarding-card{
+  width:100%; max-width: 420px;
+  background: var(--bianco);
+  border-radius: 24px;
+  padding: 28px 24px;
+  box-shadow: var(--ombra);
+  text-align:center;
+}
+.brand-title{
+  font-size: 26px; font-weight: 800; color: var(--verde-scuro);
+  line-height: 1.2; margin-bottom: 6px;
+}
+.subtitle{ color: var(--testo-tenue); font-style: italic; margin-bottom: 18px; }
+.ob-step h2{ font-size: 18px; text-align:left; }
+.help-text{ font-size: 13px; color: var(--testo-tenue); text-align:left; }
+
+.chip-group{
+  display:flex; flex-wrap: wrap; gap: 8px;
+  margin: 14px 0 18px;
+}
+.chip{
+  padding: 8px 14px;
+  border-radius: 999px;
+  border: 1px solid var(--bordo);
+  background: var(--crema);
+  font-size: 13px;
+  color: var(--testo);
+}
+.chip.selected{
+  background: var(--verde);
+  border-color: var(--verde);
+  color: #fff;
+}
+
+.btn-primary{
+  width:100%;
+  background: var(--verde);
+  color: #fff;
+  border: none;
+  border-radius: 999px;
+  padding: 13px 18px;
+  font-size: 15px;
+  font-weight: 700;
+  margin-top: 6px;
+}
+.btn-secondary{
+  width:100%;
+  background: var(--bianco);
+  color: var(--verde);
+  border: 1.5px solid var(--verde);
+  border-radius: 999px;
+  padding: 11px 18px;
+  font-size: 14px;
+  font-weight: 700;
+  margin-top: 8px;
+}
+.disclaimer-small{
+  font-size: 11px; color: var(--testo-tenue);
+  margin-top: 16px; line-height: 1.4;
+}
+
+/* ---------- App shell ---------- */
+.app{ min-height: 100vh; padding-bottom: 72px; }
+
+.app-header{
+  position: sticky; top:0; z-index: 10;
+  display:flex; align-items:center; justify-content:space-between;
+  background: var(--verde); color:#fff;
+  padding: 14px 18px;
+}
+.app-logo{ font-weight: 800; font-size: 16px; }
+.icon-btn{
+  background: rgba(255,255,255,0.15);
+  border: none; border-radius: 50%;
+  width: 34px; height:34px; font-size: 16px; color:#fff;
+}
+
+.view-container{ padding: 16px; max-width: 640px; margin: 0 auto; }
+
+.bottom-nav{
+  position: fixed; bottom:0; left:0; right:0; z-index: 10;
+  display:flex; justify-content: space-around;
+  background: #fff; border-top: 1px solid var(--bordo);
+  padding: 6px 0 8px;
+}
+.nav-btn{
+  background:none; border:none;
+  display:flex; flex-direction:column; align-items:center; gap:2px;
+  font-size: 11px; color: var(--testo-tenue);
+  padding: 4px 6px;
+}
+.nav-btn span{ font-size: 18px; }
+.nav-btn.active{ color: var(--verde); font-weight: 700; }
+
+/* ---------- Cards & componenti comuni ---------- */
+.card{
+  background: #fff; border-radius: var(--radius);
+  padding: 16px; margin-bottom: 14px; box-shadow: var(--ombra);
+}
+.section-title{ font-size: 15px; text-transform: uppercase; letter-spacing: .04em; color: var(--verde); font-weight: 800; margin: 18px 0 10px; }
+.tag{
+  display:inline-block; background: var(--pesca-chiaro); color: #9a4a22;
+  border-radius: 999px; padding: 3px 10px; font-size: 11px; margin: 2px 4px 2px 0;
+}
+.tag.age{ background: var(--verde-chiaro); color: var(--verde-scuro); }
+
+.search-bar{
+  width:100%; padding: 11px 14px; border-radius: 999px;
+  border: 1px solid var(--bordo); background:#fff; font-size: 14px; margin-bottom: 10px;
+}
+
+.filter-row{ display:flex; gap:6px; overflow-x:auto; padding-bottom: 6px; margin-bottom: 10px; }
+.filter-chip{
+  flex: 0 0 auto; padding: 7px 12px; border-radius: 999px;
+  border: 1px solid var(--bordo); background:#fff; font-size: 12.5px; white-space: nowrap;
+}
+.filter-chip.active{ background: var(--verde); color:#fff; border-color: var(--verde); }
+
+.recipe-card{
+  display:flex; justify-content: space-between; align-items:center;
+  gap: 10px; cursor:pointer;
+}
+.recipe-card .rc-title{ font-weight: 700; color: var(--verde-scuro); margin-bottom: 4px; }
+.recipe-card .rc-meta{ font-size: 12px; color: var(--testo-tenue); }
+.fav-btn{ background:none; border:none; font-size: 20px; }
+.fav-btn.active{ filter: none; }
+
+.pill-btn{
+  display:inline-block; background: var(--verde-chiaro); color: var(--verde-scuro);
+  border: none; border-radius: 999px; padding: 9px 16px; font-size: 13px; font-weight:700;
+  margin: 4px 6px 0 0;
+}
+.pill-btn.outline{ background:#fff; border: 1px solid var(--verde); color: var(--verde); }
+
+.detail-header{ display:flex; align-items:center; gap: 10px; margin-bottom: 10px; }
+.back-btn{ background:none; border:none; font-size: 20px; color: var(--verde-scuro); }
+
+.ingredient-list, .step-list{ padding-left: 18px; }
+.step-list li{ margin-bottom: 8px; }
+
+.day-row{
+  display:flex; justify-content:space-between; align-items:flex-start;
+  padding: 10px 0; border-bottom: 1px dashed var(--bordo);
+  font-size: 13.5px;
+}
+.day-row:last-child{ border-bottom:none; }
+.day-name{ font-weight: 700; color: var(--verde-scuro); width: 92px; flex: 0 0 auto; }
+.day-meals{ flex:1; text-align:right; color: var(--testo-tenue); }
+
+.diary-entry{ border-left: 3px solid var(--verde); padding-left: 10px; margin-bottom: 12px; }
+.diary-entry .de-date{ font-size: 11px; color: var(--testo-tenue); }
+.diary-entry .de-food{ font-weight: 700; }
+
+.form-field{ margin-bottom: 10px; }
+.form-field label{ display:block; font-size: 12.5px; color: var(--testo-tenue); margin-bottom: 4px; }
+.form-field input, .form-field select, .form-field textarea{
+  width:100%; padding: 9px 12px; border-radius: 10px; border: 1px solid var(--bordo); font-size: 14px; font-family: inherit;
+}
+
+.guide-item summary{ font-weight: 700; color: var(--verde-scuro); cursor:pointer; padding: 6px 0; }
+.guide-item{ border-bottom: 1px solid var(--bordo); padding: 4px 0; }
+
+.sub-table{ width:100%; border-collapse: collapse; font-size: 13px; }
+.sub-table th, .sub-table td{ text-align:left; padding: 8px 6px; border-bottom: 1px solid var(--bordo); vertical-align: top; }
+.sub-table th{ color: var(--verde-scuro); font-size: 12px; text-transform: uppercase; }
+
+.shopping-list li{ padding: 6px 0; border-bottom: 1px dashed var(--bordo); }
+.shopping-list li.checked{ text-decoration: line-through; color: var(--testo-tenue); }
+
+.empty-state{ text-align:center; color: var(--testo-tenue); padding: 30px 10px; font-size: 13.5px; }
+
+/* ---------- Stampa / PDF ---------- */
+.print-area{ display:none; }
+@media print{
+  body *{ visibility: hidden; }
+  .print-area, .print-area *{ visibility: visible; }
+  .print-area{ display:block; position: absolute; top:0; left:0; width:100%; padding: 24px; }
+  .print-area h1{ font-size: 20px; }
+  .print-area .print-meta{ font-size: 12px; color:#555; margin-bottom: 14px; }
+}
+
+@media (min-width: 720px){
+  .app-header, .view-container{ max-width: 640px; margin-left:auto; margin-right:auto; }
+  .bottom-nav{ max-width: 640px; left:50%; transform: translateX(-50%); border-radius: 18px 18px 0 0; }
+}

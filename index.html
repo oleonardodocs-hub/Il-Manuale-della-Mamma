@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Il Manuale della Mamma</title>
+<meta name="description" content="Tutto ciò che serve per accompagnare il tuo bambino alla scoperta del cibo, in un'unica app.">
+<meta name="theme-color" content="#4f7a5c">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="assets/icon-192.png">
+<link rel="apple-touch-icon" href="assets/icon-192.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ===================== ONBOARDING ===================== -->
+<section id="onboarding" class="screen">
+  <div class="onboarding-card">
+    <h1 class="brand-title">Il Manuale<br>della Mamma</h1>
+    <p id="ob-subtitle" class="subtitle"></p>
+
+    <div id="ob-step-welcome" class="ob-step">
+      <p>Pianifica i pasti, scopri ricette sicure e tieni traccia della crescita alimentare del tuo bambino, tutto in un unico posto.</p>
+      <button class="btn-primary" data-action="ob-next">Iniziamo</button>
+    </div>
+
+    <div id="ob-step-1" class="ob-step hidden">
+      <h2>Quanti mesi ha il tuo bambino?</h2>
+      <p class="help-text">Useremo questa informazione per mostrarti ricette e contenuti adatti alla sua fascia d'età.</p>
+      <div class="chip-group" id="ob-age-group"></div>
+      <button class="btn-primary" data-action="ob-next">Avanti</button>
+    </div>
+
+    <div id="ob-step-2" class="ob-step hidden">
+      <h2>Ci sono allergie note in famiglia?</h2>
+      <p class="help-text">Facoltativo: segnaleremo questi allergeni nelle ricette. Non sostituisce una valutazione medica.</p>
+      <div class="chip-group" id="ob-allergen-group"></div>
+      <button class="btn-primary" data-action="ob-finish">Entra nell'app</button>
+    </div>
+
+    <p class="disclaimer-small" id="ob-disclaimer"></p>
+  </div>
+</section>
+
+<!-- ===================== APP SHELL ===================== -->
+<div id="app" class="app hidden">
+
+  <header class="app-header">
+    <span class="app-logo">Il Manuale della Mamma</span>
+    <button class="icon-btn" data-action="open-profile" aria-label="Profilo">👤</button>
+  </header>
+
+  <main id="view-container" class="view-container"></main>
+
+  <nav class="bottom-nav">
+    <button class="nav-btn" data-view="home"><span>🏠</span>Home</button>
+    <button class="nav-btn" data-view="menu"><span>📅</span>Menù</button>
+    <button class="nav-btn" data-view="recipes"><span>🍲</span>Ricette</button>
+    <button class="nav-btn" data-view="diary"><span>📔</span>Diario</button>
+    <button class="nav-btn" data-view="library"><span>📚</span>Biblioteca</button>
+  </nav>
+</div>
+
+<!-- ===================== PRINT AREA (per PDF/stampa) ===================== -->
+<div id="print-area" class="print-area"></div>
+
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
