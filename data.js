@@ -117,6 +117,147 @@ const APP_DATA = {
       ],
       conservazione: "In frigorifero per 2 giorni; in freezer fino a 1 mese in porzioni singole."
     },
+    {
+      id: "r609", title: "Purea di zucchine e patata", ageRange: "6-8", mealType: "Pranzo",
+      prepTime: "20 min", texture: "Liscia e omogenea", allergens: [],
+      ingredients: ["1 zucchina media", "1 patata piccola", "olio extravergine d'oliva"],
+      steps: [
+        "Lava e taglia a pezzetti la zucchina e la patata.",
+        "Cuoci a vapore per 15 minuti, finché risultano molto tenere.",
+        "Frulla con un filo d'acqua di cottura fino a ottenere una crema liscia.",
+        "Aggiungi un filo d'olio a crudo prima di servire."
+      ],
+      conservazione: "In frigorifero per 2 giorni; in freezer fino a 1 mese."
+    },
+    {
+      id: "r610", title: "Crema di finocchi e patata", ageRange: "6-8", mealType: "Pranzo",
+      prepTime: "25 min", texture: "Liscia", allergens: [],
+      ingredients: ["1/2 finocchio piccolo", "1 patata piccola", "olio extravergine d'oliva"],
+      steps: [
+        "Lava e taglia il finocchio e la patata a pezzetti.",
+        "Cuoci a vapore per 18-20 minuti, finché sono molto morbidi.",
+        "Frulla con acqua di cottura fino a consistenza liscia.",
+        "Aggiungi un filo d'olio prima di servire."
+      ],
+      conservazione: "In frigorifero per 2 giorni; in freezer fino a 1 mese."
+    },
+    {
+      id: "r611", title: "Purea di prugne cotte", ageRange: "6-8", mealType: "Merenda",
+      prepTime: "15 min", texture: "Liscia", allergens: [],
+      ingredients: ["3 prugne mature"],
+      steps: [
+        "Lava le prugne, tagliale a metà e rimuovi il nocciolo.",
+        "Cuoci a vapore o in poca acqua per 8-10 minuti, finché sono morbide.",
+        "Frulla o schiaccia con una forchetta fino a ottenere una purea liscia."
+      ],
+      conservazione: "In frigorifero per 2 giorni, in contenitore chiuso.",
+      notaFamiglia: "Utile in caso di stitichezza lieve; proponila con moderazione, osservando la reazione del bambino."
+    },
+    {
+      id: "r612", title: "Crema di avena con mela", ageRange: "6-8", mealType: "Colazione",
+      prepTime: "15 min", texture: "Liscia e cremosa", allergens: ["glutine"],
+      ingredients: ["2 cucchiai di fiocchi d'avena fini", "1/2 mela", "acqua o latte materno/di proseguimento"],
+      steps: [
+        "Cuoci la mela a pezzetti a vapore per 8 minuti, finché è morbida.",
+        "Fai cuocere i fiocchi d'avena in poca acqua per 5 minuti, mescolando.",
+        "Frulla avena e mela insieme fino a ottenere una crema liscia.",
+        "Allunga con acqua o latte fino alla consistenza desiderata."
+      ],
+      conservazione: "Da consumare preferibilmente fresca; si conserva in frigorifero per 24 ore."
+    },
+    {
+      id: "r613", title: "Purè di cavolfiore e patata", ageRange: "6-8", mealType: "Pranzo",
+      prepTime: "25 min", texture: "Liscia", allergens: [],
+      ingredients: ["100 g di cimette di cavolfiore", "1 patata piccola", "olio extravergine d'oliva"],
+      steps: [
+        "Cuoci a vapore cavolfiore e patata per 15-18 minuti, finché sono teneri.",
+        "Frulla con acqua di cottura fino a ottenere una crema liscia.",
+        "Aggiungi un filo d'olio a crudo prima di servire."
+      ],
+      conservazione: "In frigorifero per 2 giorni; in freezer fino a 1 mese."
+    },
+    {
+      id: "r614", title: "Vellutata di zucca e carota", ageRange: "6-8", mealType: "Pranzo",
+      prepTime: "20 min", texture: "Liscia e vellutata", allergens: [],
+      ingredients: ["100 g di zucca", "1 carota piccola", "olio extravergine d'oliva"],
+      steps: [
+        "Lava, sbuccia e taglia a cubetti zucca e carota.",
+        "Cuoci a vapore per 15-18 minuti, finché sono morbide.",
+        "Frulla con acqua di cottura fino a ottenere una vellutata liscia.",
+        "Condisci con un filo d'olio prima di servire."
+      ],
+      conservazione: "In frigorifero per 2 giorni; in freezer fino a 1 mese."
+    },
+    {
+      id: "r615", title: "Crema di ceci passati", ageRange: "6-8", mealType: "Pranzo",
+      prepTime: "25 min", texture: "Liscia", allergens: [],
+      ingredients: ["50 g di ceci già cotti", "1/2 carota piccola", "olio extravergine d'oliva"],
+      steps: [
+        "Cuoci la carota a vapore per 12 minuti.",
+        "Frulla i ceci con la carota e un filo d'acqua fino a ottenere una crema liscia.",
+        "Passa al setaccio per eliminare eventuali bucce, se necessario.",
+        "Aggiungi un filo d'olio prima di servire."
+      ],
+      conservazione: "In frigorifero per 2 giorni; in freezer fino a 1 mese."
+    },
+    {
+      id: "r616", title: "Purea di pesca cotta", ageRange: "6-8", mealType: "Merenda",
+      prepTime: "15 min", texture: "Liscia", allergens: [],
+      ingredients: ["1 pesca matura"],
+      steps: [
+        "Sbuccia e taglia a pezzetti la pesca.",
+        "Cuoci a vapore per 6-8 minuti, finché è morbida.",
+        "Frulla o schiaccia con una forchetta fino a ottenere una purea liscia."
+      ],
+      conservazione: "In frigorifero per 2 giorni, in contenitore chiuso."
+    },
+    {
+      id: "r617", title: "Crema di spinaci e patata", ageRange: "6-8", mealType: "Pranzo",
+      prepTime: "20 min", texture: "Liscia", allergens: [],
+      ingredients: ["50 g di spinaci freschi", "1 patata piccola", "olio extravergine d'oliva"],
+      steps: [
+        "Lava bene gli spinaci e cuocili a vapore con la patata a cubetti per 15 minuti.",
+        "Frulla con acqua di cottura fino a ottenere una crema liscia.",
+        "Aggiungi un filo d'olio prima di servire."
+      ],
+      conservazione: "In frigorifero per 2 giorni; in freezer fino a 1 mese.",
+      notaFamiglia: "Le verdure a foglia verde vanno proposte con moderazione nei primi mesi; non superare 1-2 porzioni a settimana e chiedi conferma al pediatra in caso di dubbi."
+    },
+    {
+      id: "r618", title: "Purè di patata dolce (americana)", ageRange: "6-8", mealType: "Pranzo",
+      prepTime: "25 min", texture: "Liscia e cremosa", allergens: [],
+      ingredients: ["1 patata dolce piccola", "olio extravergine d'oliva"],
+      steps: [
+        "Lava, sbuccia e taglia a cubetti la patata dolce.",
+        "Cuoci a vapore per 15-18 minuti, finché è morbida.",
+        "Frulla con acqua di cottura fino a ottenere una crema liscia.",
+        "Aggiungi un filo d'olio a crudo prima di servire."
+      ],
+      conservazione: "In frigorifero per 2 giorni; in freezer fino a 1 mese."
+    },
+    {
+      id: "r619", title: "Crema di orzo perlato con carota", ageRange: "6-8", mealType: "Pranzo",
+      prepTime: "35 min", texture: "Liscia e cremosa", allergens: ["glutine"],
+      ingredients: ["30 g di orzo perlato", "1 carota piccola", "olio extravergine d'oliva"],
+      steps: [
+        "Cuoci l'orzo in acqua non salata per 25-30 minuti, finché è molto morbido.",
+        "Cuoci la carota a vapore per 15 minuti.",
+        "Frulla orzo e carota insieme fino a ottenere una crema liscia e omogenea.",
+        "Aggiungi un filo d'olio prima di servire."
+      ],
+      conservazione: "In frigorifero per 2 giorni; in freezer fino a 1 mese."
+    },
+    {
+      id: "r620", title: "Purea di albicocche cotte", ageRange: "6-8", mealType: "Merenda",
+      prepTime: "15 min", texture: "Liscia", allergens: [],
+      ingredients: ["3 albicocche mature"],
+      steps: [
+        "Lava le albicocche, tagliale a metà e rimuovi il nocciolo.",
+        "Cuoci a vapore per 6-8 minuti, finché sono morbide.",
+        "Frulla o schiaccia con una forchetta fino a ottenere una purea liscia."
+      ],
+      conservazione: "In frigorifero per 2 giorni, in contenitore chiuso."
+    },
 
     // ---------- 9–11 MESI ----------
     {
@@ -212,6 +353,146 @@ const APP_DATA = {
         "Unisci la ricotta e amalgama bene prima di servire."
       ],
       conservazione: "Da consumare entro 24-48 ore, in frigorifero."
+    },
+    {
+      id: "r909", title: "Polpettine di salmone e patate", ageRange: "9-11", mealType: "Pranzo",
+      prepTime: "30 min", texture: "Morbida, a piccoli pezzi", allergens: ["pesce"],
+      ingredients: ["80 g di filetto di salmone fresco", "1 patata piccola", "un cucchiaino di olio extravergine d'oliva"],
+      steps: [
+        "Cuoci a vapore il salmone per 10 minuti, controllando che non ci siano lische.",
+        "Lessa o cuoci a vapore la patata fino a renderla morbida, poi schiacciala.",
+        "Sfalda il salmone con una forchetta e uniscilo alla patata.",
+        "Forma piccole polpettine morbide con le mani inumidite."
+      ],
+      conservazione: "In frigorifero per 1-2 giorni; non si consiglia il congelamento del pesce già cotto."
+    },
+    {
+      id: "r910", title: "Pastina con pomodoro e ricotta", ageRange: "9-11", mealType: "Pranzo",
+      prepTime: "20 min", texture: "Morbida, pezzi piccoli", allergens: ["glutine", "latte"],
+      ingredients: ["30 g di pastina", "2 cucchiai di passata di pomodoro", "1 cucchiaio di ricotta fresca"],
+      steps: [
+        "Cuoci la pastina in acqua non salata fino a renderla molto morbida.",
+        "Scalda leggermente la passata di pomodoro.",
+        "Scola la pastina e condisci con pomodoro e ricotta, mescolando bene."
+      ],
+      conservazione: "Da consumare preferibilmente fresca; si conserva in frigorifero per 24 ore."
+    },
+    {
+      id: "r911", title: "Crema di lenticchie con pastina", ageRange: "9-11", mealType: "Cena",
+      prepTime: "30 min", texture: "Densa, con piccoli pezzi", allergens: ["glutine"],
+      ingredients: ["40 g di lenticchie decorticate", "20 g di pastina", "olio extravergine d'oliva"],
+      steps: [
+        "Cuoci le lenticchie in acqua non salata per 20 minuti, finché sono morbide.",
+        "Cuoci la pastina separatamente fino a renderla morbida.",
+        "Frulla grossolanamente le lenticchie, lasciando qualche pezzetto, e unisci la pastina.",
+        "Aggiungi un filo d'olio prima di servire."
+      ],
+      conservazione: "In frigorifero per 2 giorni; in freezer fino a 1 mese."
+    },
+    {
+      id: "r912", title: "Farinata morbida di ceci", ageRange: "9-11", mealType: "Merenda",
+      prepTime: "25 min", texture: "Morbida, a piccoli pezzi", allergens: [],
+      ingredients: ["3 cucchiai di farina di ceci", "acqua q.b.", "un cucchiaino di olio extravergine d'oliva"],
+      steps: [
+        "Mescola la farina di ceci con acqua fino a ottenere una pastella liscia senza grumi.",
+        "Versa in una piccola teglia unta d'olio.",
+        "Cuoci in forno a 200°C per 15-18 minuti, finché risulta soda ma morbida.",
+        "Taglia a listarelle morbide prima di servire."
+      ],
+      conservazione: "In frigorifero per 1-2 giorni."
+    },
+    {
+      id: "r913", title: "Purè di zucca con formaggio morbido", ageRange: "9-11", mealType: "Cena",
+      prepTime: "20 min", texture: "Morbida e cremosa", allergens: ["latte"],
+      ingredients: ["150 g di zucca", "1 cucchiaio di formaggio morbido tipo stracchino"],
+      steps: [
+        "Cuoci la zucca a vapore per 15 minuti, finché è morbida.",
+        "Schiaccia grossolanamente con una forchetta.",
+        "Unisci il formaggio morbido e amalgama fino a ottenere una crema densa."
+      ],
+      conservazione: "In frigorifero per 1-2 giorni."
+    },
+    {
+      id: "r914", title: "Bocconcini di pollo con purè di carota", ageRange: "9-11", mealType: "Pranzo",
+      prepTime: "25 min", texture: "Morbida, a piccoli pezzi", allergens: [],
+      ingredients: ["80 g di petto di pollo", "2 carote medie", "olio extravergine d'oliva"],
+      steps: [
+        "Cuoci a vapore il pollo per 15-18 minuti, finché è ben cotto e tenero.",
+        "Cuoci a vapore le carote fino a renderle morbide, poi schiacciale con una forchetta.",
+        "Taglia il pollo a bocconcini piccoli e morbidi, adatti alle capacità del bambino.",
+        "Servi insieme, con un filo d'olio a crudo."
+      ],
+      conservazione: "In frigorifero per 1-2 giorni."
+    },
+    {
+      id: "r915", title: "Risotto alla zucchina con parmigiano", ageRange: "9-11", mealType: "Pranzo",
+      prepTime: "30 min", texture: "Cremosa, a piccoli pezzi", allergens: ["latte"],
+      ingredients: ["40 g di riso per risotti", "1 zucchina piccola", "brodo vegetale non salato", "un cucchiaino di parmigiano grattugiato"],
+      steps: [
+        "Taglia la zucchina a dadini piccoli.",
+        "Tosta il riso un minuto, poi cuoci aggiungendo brodo vegetale poco alla volta, unendo la zucchina a metà cottura.",
+        "Mantieni la cottura cremosa, mescolando spesso.",
+        "A fine cottura, manteca con il parmigiano."
+      ],
+      conservazione: "Da consumare preferibilmente fresco; si conserva in frigorifero per 24 ore."
+    },
+    {
+      id: "r916", title: "Polpette di tonno e patate", ageRange: "9-11", mealType: "Cena",
+      prepTime: "25 min", texture: "Morbida, a piccoli pezzi", allergens: ["pesce"],
+      ingredients: ["60 g di tonno al naturale ben sgocciolato", "1 patata piccola lessata", "un cucchiaino di olio extravergine d'oliva"],
+      steps: [
+        "Schiaccia la patata lessata fino a renderla una purea morbida.",
+        "Sfalda il tonno con una forchetta e uniscilo alla patata.",
+        "Amalgama bene e forma piccole polpette morbide.",
+        "Puoi servirle a temperatura ambiente, senza ulteriore cottura se il tonno è già cotto."
+      ],
+      conservazione: "In frigorifero per 1-2 giorni."
+    },
+    {
+      id: "r917", title: "Vellutata di verdure con crostini morbidi", ageRange: "9-11", mealType: "Cena",
+      prepTime: "25 min", texture: "Morbida, con piccoli pezzi", allergens: ["glutine"],
+      ingredients: ["zucchina, carota e patata in parti uguali", "1 fetta di pane morbido", "olio extravergine d'oliva"],
+      steps: [
+        "Cuoci a vapore le verdure fino a renderle molto morbide.",
+        "Frulla grossolanamente, lasciando una consistenza con piccoli pezzi.",
+        "Taglia il pane a cubetti piccoli e morbidi da aggiungere sopra.",
+        "Completa con un filo d'olio a crudo."
+      ],
+      conservazione: "In frigorifero per 1-2 giorni; in freezer fino a 1 mese (senza il pane)."
+    },
+    {
+      id: "r918", title: "Cous cous morbido con verdurine", ageRange: "9-11", mealType: "Pranzo",
+      prepTime: "20 min", texture: "Morbida, a piccoli pezzi", allergens: ["glutine"],
+      ingredients: ["30 g di cous cous", "carota e zucchina a dadini piccoli", "olio extravergine d'oliva"],
+      steps: [
+        "Cuoci a vapore le verdurine fino a renderle molto tenere.",
+        "Prepara il cous cous versando acqua calda e lasciando riposare coperto per 5 minuti, poi sgrana con una forchetta.",
+        "Unisci le verdurine al cous cous e completa con un filo d'olio."
+      ],
+      conservazione: "In frigorifero per 1-2 giorni."
+    },
+    {
+      id: "r919", title: "Polpettine di ricotta e spinaci", ageRange: "9-11", mealType: "Cena",
+      prepTime: "25 min", texture: "Morbida, a piccoli pezzi", allergens: ["latte"],
+      ingredients: ["50 g di spinaci cotti e ben strizzati", "3 cucchiai di ricotta fresca", "un cucchiaio di pangrattato fine"],
+      steps: [
+        "Trita finemente gli spinaci cotti.",
+        "Uniscili alla ricotta e al pangrattato, amalgamando bene.",
+        "Forma piccole polpettine morbide e cuoci in forno a 180°C per 12-15 minuti."
+      ],
+      conservazione: "In frigorifero per 1-2 giorni."
+    },
+    {
+      id: "r920", title: "Purè di fave decorticate", ageRange: "9-11", mealType: "Pranzo",
+      prepTime: "25 min", texture: "Morbida e cremosa", allergens: [],
+      ingredients: ["80 g di fave fresche decorticate", "1 patata piccola", "olio extravergine d'oliva"],
+      steps: [
+        "Cuoci le fave e la patata in acqua non salata per 15-18 minuti, finché sono molto morbide.",
+        "Schiaccia con una forchetta o frulla grossolanamente.",
+        "Aggiungi un filo d'olio prima di servire."
+      ],
+      conservazione: "In frigorifero per 1-2 giorni.",
+      notaFamiglia: "In caso di favismo (deficit di G6PD) in famiglia, non proporre le fave e consulta il pediatra prima di introdurle."
     },
 
     // ---------- 12–17 MESI ----------
@@ -310,6 +591,141 @@ const APP_DATA = {
       ],
       conservazione: "In frigorifero per 2 giorni; in freezer fino a 1 mese."
     },
+    {
+      id: "r1209", title: "Polpette di pollo e verdure al forno", ageRange: "12-17", mealType: "Pranzo",
+      prepTime: "35 min", texture: "Pezzi piccoli, da masticare", allergens: ["uovo"],
+      ingredients: ["150 g di pollo macinato", "carota e zucchina grattugiate", "1 uovo", "pangrattato fine"],
+      steps: [
+        "Unisci pollo macinato, verdure grattugiate, uovo e pangrattato in una ciotola.",
+        "Amalgama bene e forma piccole polpette.",
+        "Disponi su una teglia foderata e cuoci in forno a 190°C per 20 minuti, girandole a metà cottura."
+      ],
+      conservazione: "In frigorifero per 2 giorni; in freezer fino a 1 mese."
+    },
+    {
+      id: "r1210", title: "Pasta al pesto leggero di basilico", ageRange: "12-17", mealType: "Pranzo",
+      prepTime: "20 min", texture: "Pezzi piccoli, da masticare", allergens: ["glutine", "latte", "frutta a guscio"],
+      ingredients: ["pasta corta", "foglie di basilico fresco", "un cucchiaino di pinoli", "parmigiano grattugiato", "olio extravergine d'oliva"],
+      steps: [
+        "Frulla basilico, pinoli, parmigiano e olio fino a ottenere un pesto cremoso, senza aglio crudo.",
+        "Cuoci la pasta in acqua non salata fino a renderla morbida.",
+        "Condisci la pasta scolata con il pesto, mescolando bene e aggiungendo un filo di acqua di cottura se serve."
+      ],
+      conservazione: "Da consumare preferibilmente fresca; il pesto si conserva in frigorifero per 2 giorni."
+    },
+    {
+      id: "r1211", title: "Vellutata di zucca con crostini integrali", ageRange: "12-17", mealType: "Cena",
+      prepTime: "25 min", texture: "Morbida, con piccoli pezzi", allergens: ["glutine"],
+      ingredients: ["zucca", "1 patata piccola", "pane integrale", "olio extravergine d'oliva"],
+      steps: [
+        "Cuoci zucca e patata a vapore fino a renderle morbide.",
+        "Frulla fino a ottenere una vellutata liscia.",
+        "Tosta leggermente il pane integrale e taglialo a cubetti piccoli da aggiungere sopra.",
+        "Completa con un filo d'olio."
+      ],
+      conservazione: "In frigorifero per 2 giorni; in freezer fino a 1 mese (senza i crostini)."
+    },
+    {
+      id: "r1212", title: "Risotto alla zucca e salvia", ageRange: "12-17", mealType: "Pranzo",
+      prepTime: "30 min", texture: "Cremosa, a piccoli pezzi", allergens: ["latte"],
+      ingredients: ["riso per risotti", "zucca a dadini", "una foglia di salvia", "brodo vegetale non salato", "parmigiano grattugiato"],
+      steps: [
+        "Cuoci la zucca a vapore fino a renderla morbida e schiacciane metà.",
+        "Tosta il riso, poi cuoci aggiungendo brodo poco alla volta insieme alla zucca e alla salvia.",
+        "A fine cottura, manteca con il parmigiano."
+      ],
+      conservazione: "Da consumare preferibilmente fresco; si conserva in frigorifero per 24 ore."
+    },
+    {
+      id: "r1213", title: "Polpette di ceci e verdure al forno", ageRange: "12-17", mealType: "Cena",
+      prepTime: "30 min", texture: "Pezzi piccoli, da masticare", allergens: [],
+      ingredients: ["ceci già cotti", "carota grattugiata", "un cucchiaio di farina", "olio extravergine d'oliva"],
+      steps: [
+        "Schiaccia i ceci con una forchetta o frullali grossolanamente.",
+        "Unisci la carota grattugiata e la farina, amalgamando fino a ottenere un composto compatto.",
+        "Forma piccole polpette e cuoci in forno a 190°C per 18-20 minuti, girandole a metà cottura."
+      ],
+      conservazione: "In frigorifero per 2 giorni; in freezer fino a 1 mese."
+    },
+    {
+      id: "r1214", title: "Pasta con sugo di verdure miste", ageRange: "12-17", mealType: "Pranzo",
+      prepTime: "25 min", texture: "Pezzi piccoli, da masticare", allergens: ["glutine"],
+      ingredients: ["pasta corta", "zucchina, carota e passata di pomodoro", "olio extravergine d'oliva"],
+      steps: [
+        "Taglia le verdure a dadini piccoli e falle stufare con un filo d'olio per 10 minuti.",
+        "Aggiungi la passata di pomodoro e cuoci altri 10 minuti.",
+        "Cuoci la pasta, scolala e condiscila con il sugo di verdure."
+      ],
+      conservazione: "In frigorifero per 2 giorni; in freezer fino a 1 mese (solo il sugo)."
+    },
+    {
+      id: "r1215", title: "Involtini di pollo morbidi con purè", ageRange: "12-17", mealType: "Cena",
+      prepTime: "35 min", texture: "Pezzi piccoli, da masticare", allergens: [],
+      ingredients: ["fettine sottili di petto di pollo", "spinaci cotti", "patate", "olio extravergine d'oliva"],
+      steps: [
+        "Disponi un po' di spinaci cotti su ogni fettina di pollo e arrotola a formare un involtino.",
+        "Cuoci in padella con un filo d'olio, coperto, per 15-18 minuti, finché il pollo è ben cotto.",
+        "Prepara un purè di patate morbido come accompagnamento.",
+        "Taglia gli involtini a fettine piccole prima di servire."
+      ],
+      conservazione: "In frigorifero per 2 giorni."
+    },
+    {
+      id: "r1216", title: "Zuppa di farro e verdure", ageRange: "12-17", mealType: "Cena",
+      prepTime: "40 min", texture: "Morbida, con piccoli pezzi", allergens: ["glutine"],
+      ingredients: ["farro perlato", "carota, sedano e zucchina", "brodo vegetale non salato", "olio extravergine d'oliva"],
+      steps: [
+        "Cuoci il farro in brodo vegetale per circa 20 minuti, finché è morbido.",
+        "Aggiungi le verdure a dadini piccoli e continua la cottura per 10-12 minuti.",
+        "Completa con un filo d'olio a crudo prima di servire."
+      ],
+      conservazione: "In frigorifero per 2 giorni; in freezer fino a 1 mese."
+    },
+    {
+      id: "r1217", title: "Polpette di merluzzo e patate al forno", ageRange: "12-17", mealType: "Cena",
+      prepTime: "30 min", texture: "Pezzi piccoli, da masticare", allergens: ["pesce"],
+      ingredients: ["filetto di merluzzo", "patate lessate", "prezzemolo tritato", "olio extravergine d'oliva"],
+      steps: [
+        "Cuoci a vapore il merluzzo per 10 minuti, controllando che non ci siano lische, poi sfaldalo.",
+        "Schiaccia le patate lessate e uniscile al merluzzo con un po' di prezzemolo.",
+        "Forma piccole polpette e cuoci in forno a 190°C per 15 minuti."
+      ],
+      conservazione: "In frigorifero per 1-2 giorni."
+    },
+    {
+      id: "r1218", title: "Risotto con piselli e zucchine", ageRange: "12-17", mealType: "Pranzo",
+      prepTime: "30 min", texture: "Cremosa, a piccoli pezzi", allergens: ["latte"],
+      ingredients: ["riso per risotti", "piselli", "zucchina a dadini", "brodo vegetale non salato", "parmigiano grattugiato"],
+      steps: [
+        "Tosta il riso, poi cuoci aggiungendo brodo poco alla volta insieme a piselli e zucchina.",
+        "Mescola spesso fino a cottura ultimata e consistenza cremosa.",
+        "Manteca con il parmigiano a fine cottura."
+      ],
+      conservazione: "Da consumare preferibilmente fresco; si conserva in frigorifero per 24 ore."
+    },
+    {
+      id: "r1219", title: "Frittata di zucchine e formaggio morbido", ageRange: "12-17", mealType: "Cena",
+      prepTime: "20 min", texture: "Pezzi piccoli, da masticare", allergens: ["uovo", "latte"],
+      ingredients: ["2 uova", "1 zucchina piccola grattugiata", "un cucchiaio di formaggio morbido", "olio extravergine d'oliva"],
+      steps: [
+        "Sbatti le uova con il formaggio morbido.",
+        "Unisci la zucchina grattugiata e mescola bene.",
+        "Cuoci in padella antiaderente con un filo d'olio, a fuoco basso, girando la frittata a metà cottura.",
+        "Taglia a listarelle morbide prima di servire."
+      ],
+      conservazione: "In frigorifero per 1-2 giorni."
+    },
+    {
+      id: "r1220", title: "Pasta e ceci delicata", ageRange: "12-17", mealType: "Pranzo",
+      prepTime: "30 min", texture: "Morbida, con piccoli pezzi", allergens: ["glutine"],
+      ingredients: ["pastina o pasta corta", "ceci già cotti", "brodo vegetale non salato", "olio extravergine d'oliva", "rosmarino"],
+      steps: [
+        "Frulla metà dei ceci con un po' di brodo fino a ottenere una crema; lascia l'altra metà intera.",
+        "Cuoci la pasta direttamente nel brodo con la crema di ceci e un rametto di rosmarino.",
+        "Unisci i ceci interi a fine cottura e completa con un filo d'olio."
+      ],
+      conservazione: "In frigorifero per 2 giorni; in freezer fino a 1 mese."
+    },
 
     // ---------- 18–24 MESI ----------
     {
@@ -403,6 +819,140 @@ const APP_DATA = {
         "Cuoci le verdure a vapore per 10 minuti.",
         "Sbatti le uova con il formaggio e unisci le verdure.",
         "Versa il composto sulla base di pasta e cuoci in forno a 180°C per 25-30 minuti."
+      ],
+      conservazione: "In frigorifero per 2 giorni."
+    },
+    {
+      id: "r1809", title: "Pasta al forno con zucchine e provola", ageRange: "18-24", mealType: "Pranzo",
+      prepTime: "40 min", texture: "Pasto di famiglia", allergens: ["glutine", "latte"],
+      ingredients: ["pasta corta", "zucchine a dadini", "provola dolce a cubetti", "besciamella leggera"],
+      steps: [
+        "Cuoci le zucchine a vapore o in padella con un filo d'olio fino a renderle morbide.",
+        "Cuoci la pasta al dente e condiscila con besciamella, zucchine e metà della provola.",
+        "Versa in una teglia, copri con la provola rimasta e gratina in forno a 190°C per 15 minuti."
+      ],
+      conservazione: "In frigorifero per 2 giorni."
+    },
+    {
+      id: "r1810", title: "Polpette di lenticchie e carote al forno", ageRange: "18-24", mealType: "Cena",
+      prepTime: "35 min", texture: "Pasto di famiglia", allergens: [],
+      ingredients: ["lenticchie già cotte", "carota grattugiata", "pangrattato", "olio extravergine d'oliva"],
+      steps: [
+        "Schiaccia le lenticchie con una forchetta fino a ottenere un composto denso.",
+        "Unisci la carota grattugiata e il pangrattato, amalgamando bene.",
+        "Forma polpette e cuoci in forno a 190°C per 20 minuti, girandole a metà cottura."
+      ],
+      conservazione: "In frigorifero per 2 giorni; in freezer fino a 1 mese."
+    },
+    {
+      id: "r1811", title: "Risotto alla milanese delicato", ageRange: "18-24", mealType: "Pranzo",
+      prepTime: "30 min", texture: "Pasto di famiglia", allergens: ["latte"],
+      ingredients: ["riso per risotti", "una bustina di zafferano", "brodo vegetale non salato", "una noce di burro", "parmigiano grattugiato"],
+      steps: [
+        "Tosta il riso, poi cuoci aggiungendo brodo vegetale poco alla volta.",
+        "Sciogli lo zafferano in un mestolo di brodo caldo e uniscilo a metà cottura.",
+        "A fine cottura, manteca con burro e parmigiano."
+      ],
+      conservazione: "Da consumare preferibilmente fresco; si conserva in frigorifero per 24 ore."
+    },
+    {
+      id: "r1812", title: "Spezzatino di pollo con patate e piselli", ageRange: "18-24", mealType: "Pranzo",
+      prepTime: "45 min", texture: "Pasto di famiglia", allergens: [],
+      ingredients: ["petto o coscia di pollo a pezzetti", "patate a cubetti", "piselli", "passata di pomodoro", "olio extravergine d'oliva"],
+      steps: [
+        "Rosola il pollo in padella con un filo d'olio per qualche minuto.",
+        "Aggiungi le patate, i piselli e la passata di pomodoro.",
+        "Copri con un po' d'acqua e cuoci a fuoco basso per 25-30 minuti, finché tutto è morbido."
+      ],
+      conservazione: "In frigorifero per 2 giorni; in freezer fino a 1 mese."
+    },
+    {
+      id: "r1813", title: "Lasagna leggera di verdure", ageRange: "18-24", mealType: "Cena",
+      prepTime: "50 min", texture: "Pasto di famiglia", allergens: ["glutine", "latte"],
+      ingredients: ["sfoglie di pasta fresca", "zucchine, carote e spinaci", "besciamella leggera", "parmigiano grattugiato"],
+      steps: [
+        "Cuoci le verdure a vapore o in padella fino a renderle morbide.",
+        "Alterna sfoglie, verdure, besciamella e un po' di parmigiano in una teglia.",
+        "Cuoci in forno a 180°C per circa 25 minuti, finché la superficie è dorata.",
+        "Lascia intiepidire e taglia a pezzi prima di servire."
+      ],
+      conservazione: "In frigorifero per 2 giorni; in freezer fino a 1 mese."
+    },
+    {
+      id: "r1814", title: "Orecchiette con cime di rapa delicate", ageRange: "18-24", mealType: "Pranzo",
+      prepTime: "30 min", texture: "Pasto di famiglia", allergens: ["glutine"],
+      ingredients: ["orecchiette", "cime di rapa", "olio extravergine d'oliva", "un pezzetto di patata (facoltativo, per addolcire)"],
+      steps: [
+        "Cuoci le cime di rapa in acqua bollente per 10 minuti, poi scolale, tenendo da parte l'acqua di cottura.",
+        "Cuoci le orecchiette nella stessa acqua, unendo le cime di rapa negli ultimi minuti.",
+        "Scola e condisci con un filo d'olio; frulla una piccola parte con la patata se il sapore risulta troppo intenso per il bambino."
+      ],
+      conservazione: "In frigorifero per 2 giorni."
+    },
+    {
+      id: "r1815", title: "Polpette di manzo al sugo", ageRange: "18-24", mealType: "Pranzo",
+      prepTime: "40 min", texture: "Pasto di famiglia", allergens: ["uovo", "glutine"],
+      ingredients: ["carne di manzo macinata", "un uovo", "pangrattato", "passata di pomodoro", "olio extravergine d'oliva"],
+      steps: [
+        "Amalgama carne, uovo e pangrattato, poi forma piccole polpette.",
+        "Rosola le polpette in padella con un filo d'olio.",
+        "Aggiungi la passata di pomodoro e cuoci coperto a fuoco basso per 20 minuti."
+      ],
+      conservazione: "In frigorifero per 2 giorni; in freezer fino a 1 mese."
+    },
+    {
+      id: "r1816", title: "Minestra di farro e legumi misti", ageRange: "18-24", mealType: "Cena",
+      prepTime: "40 min", texture: "Pasto di famiglia", allergens: ["glutine"],
+      ingredients: ["farro perlato", "legumi misti già cotti", "carota e sedano", "brodo vegetale non salato"],
+      steps: [
+        "Cuoci il farro in brodo vegetale per 20 minuti.",
+        "Aggiungi i legumi e le verdure a dadini, continuando la cottura per 10-15 minuti.",
+        "Completa con un filo d'olio a crudo prima di servire."
+      ],
+      conservazione: "In frigorifero per 2 giorni; in freezer fino a 1 mese."
+    },
+    {
+      id: "r1817", title: "Filetto di platessa al forno con patate", ageRange: "18-24", mealType: "Cena",
+      prepTime: "35 min", texture: "Pasto di famiglia", allergens: ["pesce"],
+      ingredients: ["filetto di platessa", "patate a fette sottili", "olio extravergine d'oliva", "prezzemolo"],
+      steps: [
+        "Disponi le patate a fette in una teglia con un filo d'olio e cuoci in forno a 190°C per 15 minuti.",
+        "Aggiungi il filetto di platessa sopra le patate, con un filo d'olio e prezzemolo.",
+        "Continua la cottura per altri 12-15 minuti, controllando che non ci siano lische prima di servire."
+      ],
+      conservazione: "In frigorifero per 1-2 giorni."
+    },
+    {
+      id: "r1818", title: "Pasta con ragù di verdure e lenticchie", ageRange: "18-24", mealType: "Pranzo",
+      prepTime: "35 min", texture: "Pasto di famiglia", allergens: ["glutine"],
+      ingredients: ["pasta corta", "lenticchie già cotte", "carota, sedano e passata di pomodoro", "olio extravergine d'oliva"],
+      steps: [
+        "Trita finemente carota e sedano e falli stufare con un filo d'olio per 5 minuti.",
+        "Aggiungi le lenticchie e la passata di pomodoro, cuoci a fuoco basso per 15-20 minuti.",
+        "Cuoci la pasta, scolala e condiscila con il ragù di verdure e lenticchie."
+      ],
+      conservazione: "In frigorifero per 2 giorni; in freezer fino a 1 mese (solo il sugo)."
+    },
+    {
+      id: "r1819", title: "Vellutata di carciofi", ageRange: "18-24", mealType: "Cena",
+      prepTime: "35 min", texture: "Pasto di famiglia", allergens: [],
+      ingredients: ["2 carciofi puliti", "1 patata piccola", "olio extravergine d'oliva"],
+      steps: [
+        "Pulisci bene i carciofi, eliminando le foglie più dure, e tagliali a pezzetti.",
+        "Cuoci carciofi e patata a vapore per 20 minuti, finché sono molto morbidi.",
+        "Frulla fino a ottenere una vellutata liscia, regolando la densità con acqua di cottura.",
+        "Completa con un filo d'olio prima di servire."
+      ],
+      conservazione: "In frigorifero per 2 giorni; in freezer fino a 1 mese."
+    },
+    {
+      id: "r1820", title: "Torta salata di zucca e ricotta", ageRange: "18-24", mealType: "Cena",
+      prepTime: "45 min", texture: "Pasto di famiglia", allergens: ["glutine", "uovo", "latte"],
+      ingredients: ["pasta brisée", "zucca a cubetti", "ricotta fresca", "un uovo", "parmigiano grattugiato"],
+      steps: [
+        "Cuoci la zucca a vapore fino a renderla morbida, poi schiacciala leggermente.",
+        "Mescola la zucca con ricotta, uovo e parmigiano fino a ottenere un composto omogeneo.",
+        "Stendi la pasta brisée in una teglia, versa il composto e cuoci in forno a 180°C per 30 minuti."
       ],
       conservazione: "In frigorifero per 2 giorni."
     }
@@ -532,6 +1082,87 @@ const APP_DATA = {
         "Versa l'impasto in una teglia, disponi le mele sopra e cuoci a 180°C per 35-40 minuti."
       ],
       notaFamiglia: "Dolcezza naturale data dalle mele: adatta a tutta la famiglia, senza zucchero aggiunto."
+    },
+    {
+      id: "f13", title: "Zuppa di farro e ceci", ageRange: "12+", allergens: ["glutine"],
+      ingredients: ["farro perlato", "ceci già cotti", "carota, sedano e rosmarino", "brodo vegetale"],
+      steps: [
+        "Cuoci il farro nel brodo vegetale per 20 minuti.",
+        "Aggiungi i ceci, le verdure a dadini e il rosmarino.",
+        "Continua la cottura per altri 10-15 minuti e servi con un filo d'olio."
+      ],
+      notaFamiglia: "Per gli adulti, aggiusta di sale e pepe a parte dopo aver prelevato la porzione del bambino."
+    },
+    {
+      id: "f14", title: "Polpette di melanzane al forno", ageRange: "12+", allergens: ["uovo", "glutine", "latte"],
+      ingredients: ["melanzane", "pangrattato", "un uovo", "parmigiano grattugiato"],
+      steps: [
+        "Cuoci le melanzane a vapore o al forno fino a renderle morbide, poi schiacciale.",
+        "Unisci pangrattato, uovo e parmigiano, amalgamando bene.",
+        "Forma polpette e cuoci in forno a 190°C per 20 minuti."
+      ],
+      notaFamiglia: "La porzione degli adulti può essere insaporita con aglio e basilico in più."
+    },
+    {
+      id: "f15", title: "Risotto ai funghi delicato", ageRange: "12+", allergens: ["latte"],
+      ingredients: ["riso per risotti", "funghi champignon freschi", "brodo vegetale", "parmigiano grattugiato"],
+      steps: [
+        "Pulisci e taglia finemente i funghi, falli stufare con un filo d'olio.",
+        "Tosta il riso, poi cuoci aggiungendo brodo poco alla volta insieme ai funghi.",
+        "Manteca con il parmigiano a fine cottura."
+      ],
+      notaFamiglia: "Per il bambino, assicurati che i funghi siano tagliati molto piccoli e ben cotti."
+    },
+    {
+      id: "f16", title: "Pollo alla cacciatora leggera", ageRange: "12+", allergens: [],
+      ingredients: ["pollo a pezzi", "passata di pomodoro", "carota, sedano e cipolla", "olio extravergine d'oliva"],
+      steps: [
+        "Rosola il pollo con un filo d'olio insieme alle verdure tritate finemente.",
+        "Aggiungi la passata di pomodoro e un po' d'acqua.",
+        "Cuoci coperto a fuoco basso per 30-35 minuti, finché il pollo è ben cotto e morbido."
+      ],
+      notaFamiglia: "La porzione degli adulti può essere insaporita con un pizzico di peperoncino o sale in più."
+    },
+    {
+      id: "f17", title: "Torta salata di zucchine e patate", ageRange: "12+", allergens: ["glutine", "uovo", "latte"],
+      ingredients: ["pasta brisée", "zucchine e patate a fette sottili", "2 uova", "formaggio grattugiato"],
+      steps: [
+        "Stendi la pasta in una teglia foderata.",
+        "Cuoci a vapore zucchine e patate per 10 minuti.",
+        "Sbatti le uova con il formaggio, unisci le verdure e versa sulla base di pasta.",
+        "Cuoci in forno a 180°C per 30 minuti."
+      ],
+      notaFamiglia: "Ottima anche fredda, pratica da portare fuori casa per tutta la famiglia."
+    },
+    {
+      id: "f18", title: "Minestrone della nonna", ageRange: "12+", allergens: [],
+      ingredients: ["verdure di stagione miste", "patata", "legumi a scelta", "brodo vegetale o acqua"],
+      steps: [
+        "Taglia tutte le verdure a dadini piccoli.",
+        "Cuoci in acqua o brodo per 30-35 minuti, finché le verdure sono molto morbide.",
+        "Frulla una parte per rendere il minestrone più cremoso, lasciando qualche pezzetto."
+      ],
+      notaFamiglia: "Si presta a molte varianti in base alla stagione: un classico versatile per tutta la famiglia."
+    },
+    {
+      id: "f19", title: "Polpette di salmone e patate al forno", ageRange: "12+", allergens: ["pesce"],
+      ingredients: ["filetto di salmone", "patate lessate", "prezzemolo", "pangrattato"],
+      steps: [
+        "Cuoci a vapore il salmone, controllando che non ci siano lische, poi sfaldalo.",
+        "Schiaccia le patate lessate e uniscile al salmone con prezzemolo e pangrattato.",
+        "Forma polpette e cuoci in forno a 190°C per 18-20 minuti."
+      ],
+      notaFamiglia: "Per gli adulti, un filo di limone a crudo prima di servire dà freschezza in più."
+    },
+    {
+      id: "f20", title: "Pasta al forno con ricotta e spinaci", ageRange: "12+", allergens: ["glutine", "latte"],
+      ingredients: ["pasta corta", "spinaci cotti", "ricotta fresca", "parmigiano grattugiato"],
+      steps: [
+        "Cuoci gli spinaci e tritali, poi mescolali con la ricotta.",
+        "Cuoci la pasta al dente e condiscila con il composto di ricotta e spinaci.",
+        "Versa in una teglia, spolvera di parmigiano e gratina in forno a 190°C per 15 minuti."
+      ],
+      notaFamiglia: "Un piatto completo e pratico, apprezzato da tutta la famiglia."
     }
   ],
 

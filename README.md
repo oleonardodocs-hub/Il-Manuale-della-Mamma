@@ -16,8 +16,8 @@ Applicativo web (PWA) di introduzione alimentare per famiglie con bambini da 6 a
 
 ## Stato dei contenuti
 
-- 32 ricette principali (8 per ciascuna fascia d'età: 6–8, 9–11, 12–17, 18–24 mesi)
-- 12 ricette del bonus "30 ricette per tutta la famiglia" (prima infornata, in espansione verso le 30 previste nello scopo)
+- 80 ricette principali (20 per ciascuna fascia d'età: 6–8, 9–11, 12–17, 18–24 mesi), in espansione verso le 150+ previste nello scopo
+- 20 ricette del bonus "30 ricette per tutta la famiglia", in espansione verso le 30 previste nello scopo
 - Guida completa all'introduzione alimentare, guida BLW e sicurezza a tavola, diario delle prime scoperte
 - Tabella delle sostituzioni, guida di conservazione, FAQ, testi legali/privacy (GDPR)
 
