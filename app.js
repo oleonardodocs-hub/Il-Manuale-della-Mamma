@@ -90,18 +90,41 @@ function obFinish(){
 /* ================= NAVIGAZIONE ================= */
 function startApp(){
   document.getElementById("app").classList.remove("hidden");
-  document.querySelectorAll(".nav-btn").forEach(btn=>{
-    btn.addEventListener("click", ()=>switchView(btn.dataset.view));
+
+  document.querySelectorAll(".drawer-link").forEach(btn=>{
+    btn.addEventListener("click", ()=>{
+      switchView(btn.dataset.view);
+      closeDrawer();
+    });
   });
   document.querySelector('[data-action="open-profile"]').addEventListener("click", ()=>switchView("profile"));
+  document.querySelector('[data-action="open-drawer"]').addEventListener("click", openDrawer);
+  document.querySelector('[data-action="close-drawer"]').addEventListener("click", closeDrawer);
+  document.getElementById("drawer-overlay").addEventListener("click", closeDrawer);
+
+  updateDrawerAge();
   switchView("home");
+}
+
+function openDrawer(){
+  document.getElementById("drawer").classList.add("open");
+  document.getElementById("drawer-overlay").classList.add("open");
+}
+function closeDrawer(){
+  document.getElementById("drawer").classList.remove("open");
+  document.getElementById("drawer-overlay").classList.remove("open");
+}
+function updateDrawerAge(){
+  const el = document.getElementById("drawer-age");
+  if(el) el.textContent = ageLabel(state.ageRange);
 }
 
 function switchView(view){
   state.currentView = view;
-  document.querySelectorAll(".nav-btn").forEach(b=>{
+  document.querySelectorAll(".drawer-link").forEach(b=>{
     b.classList.toggle("active", b.dataset.view === view);
   });
+  updateDrawerAge();
   const c = document.getElementById("view-container");
   if(view === "home") c.innerHTML = renderHome();
   else if(view === "menu") c.innerHTML = renderMenu();
@@ -136,10 +159,13 @@ function renderHome(){
   const todayName = ["Domenica","Lunedì","Martedì","Mercoledì","Giovedì","Venerdì","Sabato"][new Date().getDay()];
   const todayMenu = menu.find(d=>d.day===todayName) || menu[0];
 
+  const greeting = (()=>{ const h = new Date().getHours(); return h < 12 ? "Buongiorno" : h < 18 ? "Buon pomeriggio" : "Buonasera"; })();
+
   return `
-    <div class="card">
-      <h2>Ciao! 👋</h2>
-      <p>Fascia d'età selezionata: <span class="tag age">${ageLabel(state.ageRange)}</span></p>
+    <div class="hero-card">
+      <h2>${greeting}! 👋</h2>
+      <p>Ecco cosa abbiamo preparato oggi per il tuo bambino.</p>
+      <span class="tag age">${ageLabel(state.ageRange)}</span>
     </div>
 
     <div class="section-title">Ricetta del giorno</div>
@@ -229,10 +255,16 @@ function renderShoppingList(){
 /* ================= RICETTE ================= */
 let recipeFilter = { ageRange: "all", search: "" };
 
+let recipeSearchOpen = false;
+
 function renderRecipes(){
   const filtered = filterRecipes();
+  const searchActive = recipeSearchOpen || recipeFilter.search.length > 0;
   return `
-    <input type="text" class="search-bar" id="recipe-search" placeholder="Cerca per ingrediente, ricetta..." value="${recipeFilter.search}">
+    <div class="search-toggle-row">
+      <button type="button" class="search-icon-btn" id="search-toggle-btn" aria-label="Cerca"></button>
+      <input type="text" class="search-bar ${searchActive ? '' : 'hidden-collapsed'}" id="recipe-search" placeholder="Cerca per ingrediente, ricetta..." value="${recipeFilter.search}">
+    </div>
     <div class="filter-row" id="age-filter-recipes">
       <button class="filter-chip ${recipeFilter.ageRange==='all'?'active':''}" data-age="all">Tutte</button>
       ${APP_DATA.ageRanges.map(a=>`<button class="filter-chip ${recipeFilter.ageRange===a.id?'active':''}" data-age="${a.id}">${a.label}</button>`).join("")}
@@ -536,7 +568,13 @@ function attachViewListeners(view){
   }
 
   if(view === "recipes"){
-    document.getElementById("recipe-search").addEventListener("input", (e)=>{
+    const searchInput = document.getElementById("recipe-search");
+    document.getElementById("search-toggle-btn").addEventListener("click", ()=>{
+      recipeSearchOpen = !recipeSearchOpen;
+      switchView("recipes");
+      if(recipeSearchOpen) document.getElementById("recipe-search").focus();
+    });
+    searchInput.addEventListener("input", (e)=>{
       recipeFilter.search = e.target.value;
       document.getElementById("recipe-results").innerHTML =
         filterRecipes().length ? filterRecipes().map(r=>recipeCardHTML(r)).join("") : `<p class="empty-state">Nessuna ricetta trovata.</p>`;

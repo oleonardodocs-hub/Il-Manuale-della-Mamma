@@ -5,10 +5,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Il Manuale della Mamma</title>
 <meta name="description" content="Tutto ciò che serve per accompagnare il tuo bambino alla scoperta del cibo, in un'unica app.">
-<meta name="theme-color" content="#4f7a5c">
+<meta name="theme-color" content="#3f6b4d">
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="icon" href="assets/icon-192.png">
 <link rel="apple-touch-icon" href="assets/icon-192.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Inter:wght@400;500;600;700&display=swap">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -16,6 +18,7 @@
 <!-- ===================== ONBOARDING ===================== -->
 <section id="onboarding" class="screen">
   <div class="onboarding-card">
+    <div class="ob-badge">🍼</div>
     <h1 class="brand-title">Il Manuale<br>della Mamma</h1>
     <p id="ob-subtitle" class="subtitle"></p>
 
@@ -46,19 +49,32 @@
 <div id="app" class="app hidden">
 
   <header class="app-header">
+    <button class="icon-btn" data-action="open-drawer" aria-label="Apri menu"></button>
     <span class="app-logo">Il Manuale della Mamma</span>
-    <button class="icon-btn" data-action="open-profile" aria-label="Profilo">👤</button>
+    <button class="icon-btn" data-action="open-profile" aria-label="Profilo"></button>
   </header>
 
-  <main id="view-container" class="view-container"></main>
-
-  <nav class="bottom-nav">
-    <button class="nav-btn" data-view="home"><span>🏠</span>Home</button>
-    <button class="nav-btn" data-view="menu"><span>📅</span>Menù</button>
-    <button class="nav-btn" data-view="recipes"><span>🍲</span>Ricette</button>
-    <button class="nav-btn" data-view="diary"><span>📔</span>Diario</button>
-    <button class="nav-btn" data-view="library"><span>📚</span>Biblioteca</button>
+  <div id="drawer-overlay" class="drawer-overlay"></div>
+  <nav id="drawer" class="drawer">
+    <div class="drawer-head">
+      <div>
+        <div class="drawer-title">Il Manuale<br>della Mamma</div>
+        <div class="drawer-age" id="drawer-age"></div>
+      </div>
+      <button class="icon-btn ghost" data-action="close-drawer" aria-label="Chiudi menu"></button>
+    </div>
+    <div class="drawer-links">
+      <button class="drawer-link" data-view="home" data-icon="home">Home</button>
+      <button class="drawer-link" data-view="menu" data-icon="calendar">Menù settimanale</button>
+      <button class="drawer-link" data-view="recipes" data-icon="bowl">Ricette</button>
+      <button class="drawer-link" data-view="diary" data-icon="book">Diario</button>
+      <button class="drawer-link" data-view="library" data-icon="library">Biblioteca</button>
+    </div>
+    <div class="drawer-divider"></div>
+    <button class="drawer-link" data-view="profile" data-icon="user">Profilo</button>
   </nav>
+
+  <main id="view-container" class="view-container"></main>
 </div>
 
 <!-- ===================== PRINT AREA (per PDF/stampa) ===================== -->
